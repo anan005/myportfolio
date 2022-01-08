@@ -1,0 +1,878 @@
+@font-face {
+    font-family: calibri,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://use.typekit.net/uhr2yct.css");
+}
+
+@font-face {
+    font-family: montserrat,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://use.typekit.net/uhr2yct.css");
+}
+
+@font-face {
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://use.typekit.net/uhr2yct.css");
+}
+
+* {
+    background-color: black;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "calibri";
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+
+.main {  
+    position: sticky;
+    top: 0;  
+    z-index: 2;
+    height: 100%;
+}
+
+nav {
+    height: 50px;
+}
+
+nav img {
+    position: absolute;
+    width: 30px;
+    top: 5px;
+    left: 12px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    position: relative;
+    color: whitesmoke;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: whitesmoke;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s linear;
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label #btn,
+label #cancel {
+    color: whitesmoke;
+    font-size: 25px;
+    float: right;
+    line-height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+@media (max-width: 450px) {
+
+    label #btn {
+        display: block;
+    }
+
+    .toggle {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;   
+    }
+
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    input[type=checkbox]:checked ~ ul {
+        left: 0;
+        z-index: 2000;
+    } 
+
+}
+
+
+/* END OF NAVIGATION */
+
+.footer {
+    padding: 3%;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .footer {
+        font-size: 12px;
+    }
+}
+
+
+/* HELLO - INDEX */
+
+
+
+.hello { 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+}
+
+.greetings {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 100px;
+}
+
+.intro {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+.greetings span {
+    font-family: "montserrat";
+}
+
+.intro span {
+    padding: 5%;
+}
+
+/* index - 650px */
+
+@media (max-width: 650px) {
+    .greetings {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 80px;
+    }
+
+    .intro {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+
+} 
+
+/* index - 450px */
+
+@media (max-width: 450px) {
+
+    .greetings {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 60px;
+    }
+    .intro {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+
+
+}   
+
+/* END OF HELLO - INDEX */
+
+
+/* PROJECTS */
+
+.projects {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    padding: 5% 1%;
+    background-color: black;
+    font-size: 50px;
+    width: 100%;
+    
+    
+}
+
+.col img {
+    width: 350px;
+}
+
+@media (max-width: 1200px) {
+
+    .col img {
+        width: 250px;
+    }
+} 
+
+/* projects - 900px */
+      
+@media (max-width: 900px) {
+
+    .projects {
+        display: block;
+        padding: 5% 0;
+    }  
+
+    .col {
+        width: 100%;
+    }
+
+    .col img {
+        width: 350px;
+    }
+} 
+
+/* projects - 500px */
+
+@media (max-width: 500px) {
+
+    .projects {
+        display: block;
+        padding: 20% 0;
+    }  
+
+    .col {
+        width: 100%;
+    }
+
+    .col img {
+        width: 250px;
+    }
+} 
+
+
+/* END OF PROJECTS */
+
+ /* ABOUT ME */
+
+
+.container {
+
+     position: relative;
+     justify-content: center;
+}
+
+
+.aboutme {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.angel p {
+    background-color: black;
+    color: white;
+    font-family: "montserrat";
+    font-size: 30px;
+    width: 350px;
+}
+
+.about {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+
+.about span {
+    margin-top: 5%;
+    font-family: "montserrat";
+}
+
+.about p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5% 10%;
+    font-weight: 400;
+}
+
+/* aboutme - 500px */
+
+@media (max-width: 800px) {
+
+    .aboutme {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        }
+    
+
+    .picofme img {
+        width: 300px;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .angel {
+        font-size: 25px;
+    }
+
+    .about {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        padding: 5% 0;
+    }
+
+}
+
+/* END OF ME */
+
+/* Project site */
+
+p {
+    background-color: white;
+    color: black;
+    padding: 2% 10%;
+}
+
+p.bold {
+    font-weight: 700;
+}
+
+span.intro-text {
+    text-decoration: underline;
+    font-size: 10px;
+    text-align: center;
+    padding: 0 8%;
+}
+
+/* VIS A VIS */
+
+.visavis {
+    background-color: white;
+    color: black;
+    height: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.visavis section {
+    background-color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visavis img {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5%;
+}
+
+.visavis span {
+    background-color: white; 
+    color: black;
+    margin-top: 20%;
+    font-size: 24px;
+    font-family: "montserrat";
+    font-weight: 700;
+}
+
+.visavis a {
+    background-color: white;
+}
+
+section.headline {
+    height: 100vh;
+    padding: 0% 10%;
+}
+
+/* About the project vis a vis */
+
+section.about-project-visavis {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.about-project-visavis div  {
+    background-color: black;
+    padding: 5%;
+    width: 50%;
+}
+
+.about-project-visavis ul li {
+    background-color: black;
+    padding: 5%;
+}
+
+.about-project-visavis ul li span {
+    background-color: black;
+    color: white;
+    padding: 0%;
+}
+
+/* End - About the project - vis a vis */
+
+/* Rest of project - vis a vis */
+
+section.research ul li { 
+    background-color: white;
+    color: black;
+    padding: 2% 10%;
+}
+
+.hifi ul li {
+    padding: 2% 10%;
+    background-color: white;
+    color: black;
+}
+
+/* visavis - 800px */
+
+@media (max-width:800px) {
+
+    .visavis img {
+        width: 400px;
+    }
+
+    .visavis span {
+        font-size: 20px;
+    }
+
+    span.intro-text {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .visavis {
+        font-size: 16px;
+    }
+
+    .visavis img {
+        width: 250px;
+    }  
+
+    .visavis span {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section.about-project-visavis {
+        flex-direction: column;
+    }
+
+    .about-project-visavis div {   
+        padding: 0;
+        width: 100%;
+    }
+
+    span.intro-text {
+        font-size: 20px;
+    }
+}
+
+
+/* SER DU MEG */
+
+
+.serdumeg {
+    background-color: white;
+    color: black;
+    height: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.serdumeg section {
+    background-color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.serdumeg img {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5%;
+}
+
+.serdumeg span {
+    background-color: white;
+    color: black;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 24px;
+    font-family: "montserrat";
+    font-weight: 700;
+}
+
+.serdumeg a {
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+section.about-project-serdumeg {
+    background-color: #D0EFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    margin-bottom: 20%;
+}
+
+.about-project-serdumeg div {
+    background-color: #D0EFFF;
+    color: black;
+    padding: 5%;
+    width: 50%;
+}
+
+.about-project-serdumeg ul li {
+    background-color: #D0EFFF;
+    color: black;
+    padding: 5%;
+}
+
+.about-project-serdumeg ul li span {
+    background-color: #D0EFFF;
+    color: black;
+}
+
+section.headline {
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.research ul li { 
+    background-color: white;
+    color: black;
+    padding: 1% 0;
+}
+
+video {
+    margin: 5% 0;
+}
+
+@media (max-width:800px) {
+
+    .serdumeg img {
+        width: 300px;
+    }
+
+    .serdumeg span {
+        font-size: 20px;
+    }
+
+    p {
+        padding: 2% 5%;
+    }
+
+    p.bold {
+        padding: 0 10%;
+        padding-top: 4%;
+    }
+
+    .research ul li { 
+        padding: 1% 2%;
+    }
+
+    span.intro-text {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .serdumeg {
+        font-size: 16px;
+    }
+
+    .serdumeg img {
+        width: 200px;
+    }  
+
+    .serdumeg span {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 15%;
+    }
+
+    p {
+        background-color: white;
+        color: black;
+        padding: 4% 5%;
+    }
+
+    section.about-project-serdumeg {
+        flex-direction: column;
+    }
+
+    .about-project-serdumeg div {
+        width: 100%;
+    }
+
+    span.intro-text {
+        font-size: 20px;
+        padding: 5%;
+    }
+
+    .research ul li { 
+        padding: 3% 5%;
+    }
+}
+
+/* oslo nå */
+
+.aboutoslonaa ul {
+    margin-bottom: 2%;
+}
+
+.aboutoslonaa ul li {
+    background-color: white;
+    color: black;
+}
+
+.oslonaa {
+    background-color: white;
+    color: black;
+    height: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.oslonaa section {
+    background-color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.oslonaa img {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5%;
+}
+
+.oslonaa span {
+    background-color: white;
+    color: black;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 24px;
+    font-family: "montserrat";
+    font-weight: 700;
+}
+
+.oslonaa a {
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+}
+
+section.about-project-oslonaa {
+    background-color: #014A43;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    margin-bottom: 20%;
+}
+
+.about-project-oslonaa div {
+    background-color: #014A43;
+    color: white;
+    padding: 5%;
+    width: 50%;
+}
+
+.about-project-oslonaa ul li {
+    background-color: #014A43;
+    color: white;
+    padding: 5%;
+}
+
+.about-project-oslonaa ul li span {
+    background-color: #014A43;
+    color: white;
+}
+
+section.headline {
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.research ul li { 
+    background-color: white;
+    color: black;
+    padding: 1% 0;
+}
+
+
+video {
+    margin: 5% 0;
+}
+
+@media (max-width:800px) {
+
+    .oslonaa img {
+        width: 300px;
+    }
+
+    .oslonaa span {
+        font-size: 20px;
+    }
+
+    p {
+        padding: 2% 5%;
+    }
+
+    p.bold {
+        padding: 0 10%;
+        padding-top: 4%;
+    }
+
+    .research ul li { 
+        padding: 1% 2%;
+    }
+
+    span.intro-text {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .oslonaa {
+        font-size: 16px;
+    }
+
+    .oslonaa img {
+        width: 200px;
+    }  
+
+    .oslonaa span {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 15%;
+    }
+
+    p {
+        background-color: white;
+        color: black;
+        padding: 4% 5%;
+    }
+
+    section.about-project-oslonaa {
+        flex-direction: column;
+    }
+
+    .about-project-oslonaa div {
+        width: 100%;
+    }
+
+    span.intro-text {
+        font-size: 20px;
+        padding: 5%;
+    }
+
+    .research ul li { 
+        padding: 3% 5%;
+    }
+}
