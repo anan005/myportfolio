@@ -423,7 +423,12 @@ span.intro-text {
     text-decoration: underline;
     font-size: 10px;
     text-align: center;
-    padding: 0 8%;
+    padding: 0% 8%;
+}
+
+.design-challenge {
+    font-size: 24px;
+    padding: 0 10%; 
 }
 
 /* VIS A VIS */
@@ -609,7 +614,6 @@ section.about-project-serdumeg {
     flex-direction: row;
     justify-content: flex-start;
     height: 100%;
-    margin-bottom: 20%;
 }
 
 .about-project-serdumeg div {
@@ -771,7 +775,6 @@ section.about-project-oslonaa {
     flex-direction: row;
     justify-content: flex-start;
     height: 100%;
-    margin-bottom: 20%;
 }
 
 .about-project-oslonaa div {
