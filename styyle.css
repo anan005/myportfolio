@@ -415,6 +415,7 @@ p {
     background-color: white;
     color: black;
     padding: 2% 10%;
+    max-width: 800px;
 }
 
 p.bold {
